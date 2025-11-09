@@ -1,0 +1,8 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <article>
+    <h2>{{ object.title }}</h2>
+    <p>By {{ object.author }} on {{ object.created|date:"M d, Y H:i" }}</p>
+    <div>{{ object.body|linebreaks }}</div>
+  </article>
+{% endblock %}
